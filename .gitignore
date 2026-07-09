@@ -1,0 +1,35 @@
+# ==========================================
+# 1. Gradle (Pliki budowania i cache)
+# ==========================================
+.gradle/
+build/
+/out/
+
+# Ignorujemy dystrybucję Gradle, jeśli używasz Gradle Wrapper (opcjonalne, ale zalecane zostawić wrapper w gicie, a ignorować tylko cache)
+.gradle-wrapper/
+
+# ==========================================
+# 2. IntelliJ IDEA (Konfiguracja IDE)
+# ==========================================
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Wyjątek: Jeśli pracujesz w zespole, czasami warto współdzielić słownik lub styl kodowania. 
+# Poniższe linie dbają o to, żeby prywatne pliki IntelliJ nie trafiały do Gita:
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/shelf/
+.idea/dictionaries/
+.idea/libraries/
+
+# ==========================================
+# 3. Systemowe i logi (Śmieci z OS)
+# ==========================================
+# Logi aplikacji
+*.log
+
+# Pliki systemowe Mac i Windows
+.DS_Store
+Thumbs.db
