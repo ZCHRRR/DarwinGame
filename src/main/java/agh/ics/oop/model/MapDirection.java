@@ -16,18 +16,18 @@ public enum MapDirection {
     }
     public MapDirection next(){
         return switch(this) {
-            case NORTH -> SOUTH;
+            case NORTH -> EAST;
             case SOUTH -> WEST;
-            case WEST -> EAST;
-            case EAST -> NORTH;
+            case WEST -> NORTH;
+            case EAST -> SOUTH;
         };
     }
     public MapDirection previous() {
         return switch (this) {
-            case NORTH -> EAST;
-            case SOUTH -> NORTH;
+            case NORTH -> WEST;
+            case SOUTH -> EAST;
             case WEST -> SOUTH;
-            case EAST -> WEST;
+            case EAST -> NORTH;
         };
     }
     public Vector2d toUnitVector(){
