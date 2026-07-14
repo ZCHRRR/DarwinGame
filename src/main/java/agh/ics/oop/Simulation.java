@@ -3,6 +3,7 @@ package agh.ics.oop;
 import agh.ics.oop.model.Animal;
 import agh.ics.oop.model.MoveDirection;
 import agh.ics.oop.model.Vector2d;
+import agh.ics.oop.model.WorldMap;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +14,7 @@ public class Simulation{
     private final List<MoveDirection> directions;
     private final List<Vector2d> positions;
 
-    public Simulation(List<Vector2d> positions, List<MoveDirection> directions) {
+    public Simulation(List<Vector2d> positions, List<MoveDirection> directions, WorldMap map) {
 
         for (Vector2d position : positions){
             simulationEntities.add(new Animal(position));
