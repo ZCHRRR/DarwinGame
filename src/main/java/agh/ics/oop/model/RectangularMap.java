@@ -13,13 +13,14 @@ public class RectangularMap implements WorldMap {
     private final Vector2d mapUpperLimit;
     private final Vector2d mapLowerLimit;
 
-    private RectangularMap(int width, int height) {
+    public RectangularMap(int width, int height) {
 
         this.mapUpperLimit = new Vector2d(width, height);
         this.mapLowerLimit = new Vector2d(0, 0);
 
         MapVisualizer visualizer = new MapVisualizer(this);
         String map = visualizer.draw(mapUpperLimit, mapLowerLimit);
+        System.out.println(map);
     }
 
     @Override
@@ -58,8 +59,14 @@ public class RectangularMap implements WorldMap {
     @Override
     public boolean canMoveTo(Vector2d position) {
 
-        return position.precedes(mapLowerLimit) &&
-                position.follows(mapUpperLimit) &&
+        return position.follows(mapLowerLimit) &&
+                position.precedes(mapUpperLimit) &&
                 !isOccupied(position);
     }
+    @Override
+    public String toString() {
+        MapVisualizer visualizer = new MapVisualizer(this);
+        return visualizer.draw(this.mapLowerLimit, this.mapUpperLimit);
+    }
 }
+

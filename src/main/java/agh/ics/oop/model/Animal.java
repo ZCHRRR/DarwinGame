@@ -20,11 +20,14 @@ public class Animal {
 
     @Override
     public String toString() {
-        return "Animal{" +
-                "orientation=" + orientation +
-                ", position=" + position +
-                '}';
+        return switch (this.orientation) {
+            case NORTH -> "^";
+            case EAST  -> ">";
+            case SOUTH -> "v";
+            case WEST  -> "<";
+        };
     }
+
     boolean isAt(Vector2d position) {
 
         return this.position.equals(position);

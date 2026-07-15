@@ -3,6 +3,8 @@ import agh.ics.oop.model.MoveDirection;
 import agh.ics.oop.model.Vector2d;
 import agh.ics.oop.model.MapDirection;
 import agh.ics.oop.model.Animal;
+import agh.ics.oop.model.WorldMap;
+import agh.ics.oop.model.RectangularMap;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,17 +14,13 @@ public class World {
         System.out.println("System Wystartowal");
         List<MoveDirection> directions = OptionsParser.parse(args);
         List<Vector2d> positions = List.of(new Vector2d(2,2), new Vector2d(3,4));
-        Simulation simulation = new Simulation(positions, directions);
+        WorldMap map = new RectangularMap(4, 4);
+                
+        Simulation simulation = new Simulation(positions, directions, map);
+        System.out.println("Stan początkowy mapy:");
+        System.out.println(map);
+        System.out.println("========================================");
         simulation.run();
-        Animal penguin = new Animal();
-        System.out.println(penguin.getPosition());
-        System.out.println(penguin.getOrientation());
-        penguin.move(MoveDirection.LEFT);
-        penguin.move(MoveDirection.FORWARD);
-        penguin.move(MoveDirection.RIGHT);
-        penguin.move(MoveDirection.BACKWARD);
-        System.out.println(penguin.getPosition());
-        System.out.println(penguin.getOrientation());
         System.out.println("System Zakonczyl dzialanie");
     }
 
