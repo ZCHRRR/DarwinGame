@@ -1,3 +1,12 @@
-# 🌍 Darwin Game — Symulacja Życia na Planszy 2D 🦁🌿
-
-Cześć! 👋 Witaj w projekcie **Darwin Game** — interaktywnej symulacji ekosystemu inspirowanej teorią ewolucji Karola Darwina. Jest to mój pierwszy projekt stworzony w ramach nauki języka **Java** oraz programowania obiektowego (OOP)! 🚀
+# Darwin Game
+ 
+2D ecosystem simulation inspired by Darwinian evolution. Built in Java as an object-oriented programming project.
+ 
+## Overview
+ 
+Animals and plants coexist on a 2D grid, competing for resources, reproducing, and evolving over generations. Traits are inherited with variation, so populations adapt to environmental pressures over time.
+ 
+## Tech Stack
+ 
+- Java
+- Object-Oriented Programming (inheritance, polymorphism, encapsulation)
